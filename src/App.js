@@ -1,5 +1,15 @@
 import React, {Component} from 'react';
+import styled from 'styled-components'
 import './App.css';
+
+const AppWrapper = styled.div`
+     background-color: lightgray;
+     display: flex;
+     box-sizing: border-box;
+     align-items: center;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+`
+
 
 class App extends Component {
 
@@ -22,7 +32,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            <AppWrapper>
                 
                 <h1>Todo-Liste</h1>
                 <ul className="App-todo">
@@ -36,7 +46,7 @@ class App extends Component {
                         })}
                 </ul>
                 <button onClick={this.addTodo}>Todo hinzufügen</button>
-            </div>
+            </AppWrapper>
         );
     }
 }
